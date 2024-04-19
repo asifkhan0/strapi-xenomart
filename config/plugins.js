@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-const jwtSecret = crypto.randomBytes(16).toString('base64');
 
 module.exports = ({ env }) => ({
     // ...
@@ -18,7 +17,6 @@ module.exports = ({ env }) => ({
         },
     },
     'users-permissions': {
-        jwtSecret,
+        jwtSecret: crypto.randomBytes(16).toString('base64'),
     },
-    // ...
 });
