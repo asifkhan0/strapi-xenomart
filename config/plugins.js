@@ -1,3 +1,6 @@
+const crypto = require('crypto');
+const jwtSecret = crypto.randomBytes(16).toString('base64');
+
 module.exports = ({ env }) => ({
     // ...
     upload: {
@@ -13,6 +16,9 @@ module.exports = ({ env }) => ({
                 delete: {},
             },
         },
+    },
+    'users-permissions': {
+        jwtSecret,
     },
     // ...
 });
