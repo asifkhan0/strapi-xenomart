@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "products"
+    "displayName": "products",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,17 +13,47 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "image": {
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "price": {
+      "required": true,
+      "type": "decimal"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "new arrival",
+        "men",
+        "women",
+        "shirt",
+        "jeans",
+        "paint",
+        "shoes"
+      ]
+    },
+    "offer_price": {
+      "type": "decimal"
+    },
+    "instantDelivery": {
+      "type": "boolean"
     }
   }
 }

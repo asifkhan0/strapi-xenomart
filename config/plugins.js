@@ -1,7 +1,4 @@
-const crypto = require('crypto');
-
 module.exports = ({ env }) => ({
-    // ...
     upload: {
         config: {
             provider: 'cloudinary',
@@ -15,8 +12,5 @@ module.exports = ({ env }) => ({
                 delete: {},
             },
         },
-    },
-    'users-permissions': {
-        jwtSecret: crypto.randomBytes(16).toString('base64'),
     },
 });
