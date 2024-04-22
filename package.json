@@ -31,8 +31,5 @@
   },
   "strapi": {
     "uuid": "3783167a-6eb4-4124-ae51-44396ac6e35b"
-  },
-  "devDependencies": {
-    "monaco-editor-webpack-plugin": "^7.1.0"
   }
 }
